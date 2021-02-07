@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 
 // Source: https://www.youtube.com/watch?v=a_7Z7C_JCyo
 // Code: https://github.com/john-smilga/react-projects/tree/master/15-cocktails
+// API: https://thecocktaildb.com/api.php (free - basic endpoints do not require a key)
 
 function App() {
   return (
