@@ -15,6 +15,8 @@ const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   // Set 'a' as default so that drinks with 'a' are shown on the screen as default.
+  // If left empty (i.e. as empty string), drinks will display on screen,
+  // but randomly and not just those with 'a'
   const [searchTerm, setSearchTerm] = useState('a');
   const [cocktails, setCocktails] = useState([]);
 
