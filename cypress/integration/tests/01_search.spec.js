@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Cocktails', () => {
+describe('Test Suite', () => {
   beforeEach(() => {
     // cy.visit(Cypress.env('baseUrl'));
     cy.visit(Cypress.env('liveBaseUrl'));
