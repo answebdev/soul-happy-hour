@@ -1,12 +1,16 @@
 /// <reference types="cypress" />
 
 describe('Cocktails', () => {
-  it('Searches for cocktails', () => {
+  beforeEach(() => {
     cy.visit(Cypress.env('baseUrl'));
-    cy.get('[data-testid=input]').type('ABC');
   });
 
-  //   it('Searches for cocktail that does not exist', () => {
-  //     cy.get('[data-testid=input]').type('XOXO');
-  //   });
+  it('Searches for cocktails', () => {
+    cy.get('[data-testid=input]').type('Mimosa');
+    cy.get('[data-testid=cocktail-name]')
+      .should('have.length', 1)
+      .and('contain', 'Mimosa');
+
+    cy.contains('details').click();
+  });
 });
