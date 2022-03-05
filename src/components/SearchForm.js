@@ -28,6 +28,7 @@ const SearchForm = () => {
             id='name'
             ref={searchValue}
             onChange={searchCocktail}
+            data-testid='input'
           />
         </div>
       </form>
