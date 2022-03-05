@@ -20,12 +20,31 @@ describe('Cocktails', () => {
     cy.log(
       'Checking that user goes back to the home page when clicking Back Home button'
     );
-    cy.contains('back home').click();
+    cy.get('[data-testid=back-btn]').click();
+    // cy.contains('back home').click();
   });
 
   it('Searches for cocktail that does not exist', () => {
     cy.get('[data-testid=input]').type('The Obi Wan');
     cy.contains('no cocktails matched your search criteria').should('exist');
+  });
+
+  it('Checks link to About Page', () => {
+    cy.log('Checking that there is an About link');
+    cy.get('[data-testid=about-link]').click();
+    cy.log('Checking URL for About Page');
+    cy.url().should('include', '/about');
+    cy.log('Checking that h1 header has About Us text');
+    cy.get('[data-testid=about-us]').should('have.text', 'about us');
+  });
+
+  it('Checks link to Home Page', () => {
+    cy.log('Checking that there is an Home link');
+    cy.get('[data-testid=home-link]').click();
+    cy.log('Checking URL for Home Page');
+    cy.url().should('include', '/');
+    cy.log('Checking that h2 header has Cocktails text');
+    cy.get('[data-testid=cocktails-header]').should('have.text', 'cocktails');
   });
 });
 

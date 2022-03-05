@@ -11,10 +11,14 @@ export default function Navbar() {
         </Link>
         <ul className='nav-links'>
           <li>
-            <Link to='/'>home</Link>
+            <Link data-testid='home-link' to='/'>
+              home
+            </Link>
           </li>
           <li>
-            <Link to='/about'>about</Link>
+            <Link data-testid='about-link' to='/about'>
+              about
+            </Link>
           </li>
         </ul>
       </div>
