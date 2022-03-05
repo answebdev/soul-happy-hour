@@ -73,19 +73,12 @@ const SingleCocktail = () => {
   }
   // Destructure properties from object,
   // then place them inside the return
-  const {
-    name,
-    image,
-    category,
-    info,
-    glass,
-    instructions,
-    ingredients,
-  } = cocktail;
+  const { name, image, category, info, glass, instructions, ingredients } =
+    cocktail;
 
   return (
     <section className='section cocktail-section'>
-      <Link to='/' className='btn btn-primary'>
+      <Link data-testid='back-btn' to='/' className='btn btn-primary'>
         back home
       </Link>
       <h2 className='section-title'>{name}</h2>
