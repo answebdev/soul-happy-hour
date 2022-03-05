@@ -2,8 +2,8 @@
 
 describe('Cocktails', () => {
   beforeEach(() => {
-    cy.visit(Cypress.env('baseUrl'));
-    // cy.visit(Cypress.env('liveBaseUrl'));
+    // cy.visit(Cypress.env('baseUrl'));
+    cy.visit(Cypress.env('liveBaseUrl'));
   });
 
   it('Searches for cocktails', () => {
