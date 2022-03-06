@@ -6,7 +6,16 @@ describe('Test Suite', () => {
     cy.visit(Cypress.env('liveBaseUrl'));
   });
 
-  it('Searches for cocktails', () => {
+  it('should return mimosa cocktail data', () => {
+    cy.request({
+      method: 'GET',
+      url: 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=mimosa',
+    }).should((response) => {
+      cy.log(JSON.stringify(response.body));
+    });
+  });
+
+  it('searches for cocktails', () => {
     cy.get('[data-testid=input]').type('Mimosa');
     cy.get('[data-testid=cocktail-name]')
       .should('have.length', 1)
@@ -24,12 +33,12 @@ describe('Test Suite', () => {
     // cy.contains('back home').click();
   });
 
-  it('Searches for cocktail that does not exist', () => {
+  it('searches for cocktail that does not exist', () => {
     cy.get('[data-testid=input]').type('The Obi Wan');
     cy.contains('no cocktails matched your search criteria').should('exist');
   });
 
-  it('Checks link to About Page', () => {
+  it('checks link to About Page', () => {
     cy.log('Checking that there is an About link');
     cy.get('[data-testid=about-link]').click();
     cy.log('Checking URL for About Page');
@@ -38,7 +47,7 @@ describe('Test Suite', () => {
     cy.get('[data-testid=about-us]').should('have.text', 'about us');
   });
 
-  it('Checks link to Home Page', () => {
+  it('checks link to Home Page', () => {
     cy.log('Checking that there is an Home link');
     cy.get('[data-testid=home-link]').click();
     cy.log('Checking URL for Home Page');
