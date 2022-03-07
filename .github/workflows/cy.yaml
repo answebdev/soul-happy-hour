@@ -1,4 +1,5 @@
 name: End-to-end tests
+if: ${{ failure() }}
 on: [push]
 jobs:
   cypress-run:
