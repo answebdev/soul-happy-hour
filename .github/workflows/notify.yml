@@ -1,7 +1,7 @@
 name: 'Notify users on file change'
 on:
   push:
-    branches: [master]
+    branches: [main]
 jobs:
   notif:
     runs-on: ubuntu-latest
