@@ -1,5 +1,4 @@
 name: End-to-end tests
-if: always()
 on: [push]
 jobs:
   cypress-run:
