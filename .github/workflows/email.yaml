@@ -1,4 +1,5 @@
 name: Send mail
+on: push
 uses: dawidd6/action-send-mail@v3
 with:
   # Required mail server address:
