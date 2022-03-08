@@ -13,7 +13,7 @@ jobs:
         run: echo Hello, world! && exit 1
 
 name: Send mail
-  if: always()
+  if: ${{ failure() }}
   uses: dawidd6/action-send-mail@v2
   with:
     # mail server settings
