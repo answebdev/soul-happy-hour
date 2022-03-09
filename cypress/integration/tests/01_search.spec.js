@@ -3,7 +3,8 @@
 describe('Test Suite', () => {
   beforeEach(() => {
     // cy.visit(Cypress.env('baseUrl'));
-    cy.visit(Cypress.env('liveBaseUrl'));
+    //    cy.visit(Cypress.env('liveBaseUrl'));
+    cy.visit('liveBaseUrl');
   });
 
   it('should return mimosa cocktail data', () => {
