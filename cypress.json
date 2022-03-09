@@ -1,8 +1,0 @@
-{
-    "ignoreTestFiles": [
-        "**/1-getting-started/*",
-        "**/2-advanced-examples/*"
-    ],
-    "viewportHeight": 1080,
-    "viewportWidth": 1920
-}
